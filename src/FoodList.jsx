@@ -1,16 +1,16 @@
-import React from 'react';
 import FoodItem from './FoodItem';
 
-function FoodList({ food, onDeletes }) {
-  if (foods.length === 0) {
-    return <p className="text-center text-gray-500">No foods logged yet.</p>;
-  }
-
+function FoodList({ foods, onDelete }) {
   return (
-    <div className="flex flex-col gap-3">
-      {foods.map((food) => (
-        <FoodItem key={food.id} food={food} onDelete={onDelete} />
-      ))}
+    <div className="space-y-3">
+      <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Your Log</h2>
+      {foods.length === 0 ? (
+        <p className="text-center text-slate-400 py-4 italic">No items logged yet...</p>
+      ) : (
+        foods.map((food) => (
+          <FoodItem key={food.id} food={food} onDelete={onDelete} />
+        ))
+      )}
     </div>
   );
 }

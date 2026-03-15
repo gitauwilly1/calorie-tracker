@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #3b82f6;
+  --color-brand-danger: #ef4444;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900;
+}
