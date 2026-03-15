@@ -4,6 +4,9 @@ import FoodList from './FoodList';
 function App() {
   const [newName, setNewName] = useState('');
   const [newCalories, setNewCalories] = useState('');
+  const handleDeleteFood = (id) => {
+    setFoods(foods.filter((food) => food.id !== id));
+  };
   const [foods, setFoods] = useState([
     { id: 1, name: 'Apple', calories: 95 },
     { id: 2, name: 'Banana', calories: 105 },
@@ -47,7 +50,7 @@ function App() {
             Add
           </button>
         </form>
-        <FoodList foods={foods} />
+        <FoodList foods={foods} onDelete={handleDeleteFood} />
       </div>
     </div>
   );
