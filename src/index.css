@@ -1,4 +1,12 @@
 @import "tailwindcss";
+
 @theme {
-  --color-brand-primary: #6366f1; /* Indigo shade */
+  --color-brand-primary: #6366f1;
+}
+
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
 }
